@@ -1,10 +1,22 @@
 fileFormatVersion: 2
-guid: 113f95c95d2074b44b27d60a372bb9b1
+guid: ba3cc5bc8254b4445a42e9ec8817cebd
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7127815578132815392
-    second: Kitchen_0
+      213: -1164972400582626219
+    second: tenedor_0
+  - first:
+      213: -457129483494919963
+    second: tenedor_1
+  - first:
+      213: 7022132377334049534
+    second: tenedor_2
+  - first:
+      213: 2510792152400595719
+    second: tenedor_3
+  - first:
+      213: 4844690438345302235
+    second: tenedor_4
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +112,57 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Kitchen_0
+      name: tenedor_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 512
-        height: 256
+        x: 8
+        y: 2
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 554732226cf25dfe0800000000000000
+      internalID: -1164972400582626219
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tenedor_1
+      rect:
+        serializedVersion: 2
+        x: 40
+        y: 2
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5e07def1823f7a9f0800000000000000
+      internalID: -457129483494919963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tenedor_2
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 2
+        width: 16
+        height: 27
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +171,30 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0e1e5e81f79e41d90800000000000000
-      internalID: -7127815578132815392
+      spriteID: efae3cc3130a37160800000000000000
+      internalID: 7022132377334049534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: tenedor_3
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 2
+        width: 16
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70b0dace82028d220800000000000000
+      internalID: 2510792152400595719
       vertices: []
       indices: 
       edges: []
@@ -125,7 +203,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 9c289b44341b9ee42bbba81bc2ebb690
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +213,11 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Kitchen_0: -7127815578132815392
+      tenedor_0: -1164972400582626219
+      tenedor_1: -457129483494919963
+      tenedor_2: 7022132377334049534
+      tenedor_3: 2510792152400595719
+      tenedor_4: 4844690438345302235
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
