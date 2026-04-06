@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 87aa87b526a324046a0241ee1dc15ed5
+guid: dce52c9a026a0784da413544586db6a7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5699104055798326421
-    second: Garden_0
+      213: -2990331278676226884
+    second: GrassPlatforms_0
+  - first:
+      213: 2365391511798052345
+    second: GrassPlatforms_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 32
+  spritePixelsToUnits: 64
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,23 +103,67 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Garden_0
+      name: GrassPlatforms_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 512
-        height: 256
+        y: 38
+        width: 64
+        height: 26
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b6b17207e07b8e0b0800000000000000
-      internalID: -5699104055798326421
+      spriteID: cbc83c5ab853086d0800000000000000
+      internalID: -2990331278676226884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassPlatforms_1
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 38
+        width: 64
+        height: 26
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f5727f2c0f83d020800000000000000
+      internalID: 2365391511798052345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: GrassPlatforms_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 38
+        width: 64
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7fff12fbb9d02b5408206db9c39dba85
+      internalID: 978160556
       vertices: []
       indices: 
       edges: []
@@ -125,7 +172,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: df08e1eeeef3e0c4d9ff3cb9697df00f
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +182,9 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Garden_0: -5699104055798326421
+      GrassPlatforms_0: -2990331278676226884
+      GrassPlatforms_1: 2365391511798052345
+      GrassPlatforms_2: 978160556
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

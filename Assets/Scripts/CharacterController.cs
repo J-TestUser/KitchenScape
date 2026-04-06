@@ -7,18 +7,23 @@ public class CharacterController : MonoBehaviour
     public float movementSpeed = 5;
     public float jumpForce = 12;
 
-    private BoxCollider2D _boxCollider;
-
-    private InputAction moveAction;
     public Vector2 moveDirection;
-    private InputAction jumpAction;
-    private InputAction pauseAction;
 
+    //InputActions
+    private InputAction moveAction;
+    private InputAction jumpAction;
+    private InputAction shootAction;
+
+    //Components
+    private BoxCollider2D _boxCollider;
     public Rigidbody2D rBody2D;
     private SpriteRenderer renderer;
     private GroundSensor sensor;
-
     private Animator _animator;
+
+    //Bullets
+    public GameObject bulletPrefab;
+    public Transform bulletSpawn;
 
     void Awake()
     {
@@ -28,7 +33,8 @@ public class CharacterController : MonoBehaviour
         _animator = GetComponent<Animator>();
 
         moveAction = InputSystem.actions["Move"];
-        jumpAction = InputSystem.actions["Jump"]; 
+        jumpAction = InputSystem.actions["Jump"];
+        shootAction = InputSystem.actions["Attack"]; 
     }
     
 
@@ -67,6 +73,16 @@ public class CharacterController : MonoBehaviour
             rBody2D.AddForce(Vector2.up* jumpForce, ForceMode2D.Impulse);
         }
         _animator.SetBool("IsJumping", !sensor.isGrounded);
+
+        if (shootAction.WasPressedThisFrame())
+        {
+            Shoot();
+        }
+
+    void Shoot()
+    {
+        Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+    }
         
 
     }
