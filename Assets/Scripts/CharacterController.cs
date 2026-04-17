@@ -25,6 +25,12 @@ public class CharacterController : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
 
+    //WallJump
+    private bool isWallSliding;
+    private float wallSlidingSpeed = 1f;
+    [SerializeField] private Transform wallChecker;
+    [SerializeField] private LayerMask wallLayer;
+
     void Awake()
     {
         rBody2D = GetComponent<Rigidbody2D>();
@@ -78,6 +84,7 @@ public class CharacterController : MonoBehaviour
         {
             Shoot();
         }
+        IsWallSliding();
 
     void Shoot()
     {
@@ -89,5 +96,23 @@ public class CharacterController : MonoBehaviour
     void FixedUpdate()
     {
         rBody2D.linearVelocity = new Vector2(moveDirection.x * movementSpeed, rBody2D.linearVelocity.y);
+    }
+
+    private bool IsWalled()
+    {
+        return Physics2D.OverlapCircle(wallChecker.position, 0.2f, wallLayer); //Creamos un criculo alrededor del wallchecker con un radio de 0.2 que devuleve true cuando si detecta el  layer Wall
+    }
+
+    private void IsWallSliding()
+    {
+        if(IsWalled() && !sensor.isGrounded && moveDirection.x != 0f)
+        {
+            isWallSliding = true;
+            rBody2D.linearVelocity = new Vector2(rBody2D.linearVelocity.x, Mathf.Clamp(rBody2D.linearVelocity.y, -wallSlidingSpeed, float.MaxValue));
+        }
+        else
+        {
+            isWallSliding = false;
+        }
     }
 }

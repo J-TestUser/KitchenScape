@@ -390,7 +390,7 @@ GameObject:
   m_Component:
   - component: {fileID: 20293993}
   - component: {fileID: 20293994}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2859,7 +2859,7 @@ GameObject:
   m_Component:
   - component: {fileID: 131544241}
   - component: {fileID: 131544242}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5083,7 +5083,7 @@ GameObject:
   m_Component:
   - component: {fileID: 194175507}
   - component: {fileID: 194175508}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10247,7 +10247,7 @@ GameObject:
   m_Component:
   - component: {fileID: 391968218}
   - component: {fileID: 391968219}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -10334,7 +10334,7 @@ GameObject:
   m_Component:
   - component: {fileID: 397695249}
   - component: {fileID: 397695250}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -14403,7 +14403,7 @@ GameObject:
   m_Component:
   - component: {fileID: 565678166}
   - component: {fileID: 565678167}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -20509,7 +20509,7 @@ GameObject:
   m_Component:
   - component: {fileID: 817876613}
   - component: {fileID: 817876614}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -22938,7 +22938,7 @@ GameObject:
   m_Component:
   - component: {fileID: 914741371}
   - component: {fileID: 914741372}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24662,7 +24662,7 @@ GameObject:
   m_Component:
   - component: {fileID: 975136924}
   - component: {fileID: 975136925}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -26893,7 +26893,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1052311307}
   - component: {fileID: 1052311308}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (16)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -27920,7 +27920,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1109170382}
   - component: {fileID: 1109170383}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -29048,7 +29048,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1159185931}
   - component: {fileID: 1159185932}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -30163,7 +30163,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1202871699}
   - component: {fileID: 1202871700}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31248,7 +31248,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1233532946}
   - component: {fileID: 1233532947}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -31366,7 +31366,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1240138457}
   - component: {fileID: 1240138458}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32007,7 +32007,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1276575873}
   - component: {fileID: 1276575874}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32094,7 +32094,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1276932168}
   - component: {fileID: 1276932169}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -32304,6 +32304,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isGrounded: 0
+  layers:
+    serializedVersion: 2
+    m_Bits: 64
 --- !u!61 &1280235560
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -35977,7 +35980,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1448389243}
   - component: {fileID: 1448389244}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -36120,7 +36123,7 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.2920816, y: -0.11005968}
+  m_Offset: {x: 0.2920816, y: -0.113392025}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0, y: 0}
@@ -36130,7 +36133,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.21264982, y: 0.8137454}
+  m_Size: {x: 0.21264982, y: 0.48717493}
   m_EdgeRadius: 0
 --- !u!1 &1454616421
 GameObject:
@@ -37698,7 +37701,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1534391328}
   - component: {fileID: 1534391329}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -38646,7 +38649,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1555736092}
   - component: {fileID: 1555736093}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Wall1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -40858,7 +40861,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1621978953}
   - component: {fileID: 1621978954}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -42441,7 +42444,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1692624239}
   - component: {fileID: 1692624240}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43960,7 +43963,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1745065630}
   - component: {fileID: 1745065631}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -45526,7 +45529,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1809896166}
   - component: {fileID: 1809896167}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -46923,7 +46926,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1870270404}
   - component: {fileID: 1870270405}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -49309,7 +49312,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1932266199}
   - component: {fileID: 1932266200}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50432,7 +50435,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1975651704}
   - component: {fileID: 1975651705}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (17)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -52023,7 +52026,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2028575337}
   - component: {fileID: 2028575338}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: WoodTileo_3 (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -53719,6 +53722,10 @@ MonoBehaviour:
   rBody2D: {fileID: 0}
   bulletPrefab: {fileID: 1703706253090491506, guid: 4670f4144369dcf4680238e4da612cab, type: 3}
   bulletSpawn: {fileID: 1238558822}
+  wallChecker: {fileID: 1452771532}
+  wallLayer:
+    serializedVersion: 2
+    m_Bits: 128
 --- !u!61 &2109858947
 BoxCollider2D:
   m_ObjectHideFlags: 0
