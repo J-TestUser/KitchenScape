@@ -21,15 +21,19 @@ public class CharacterController : MonoBehaviour
     private GroundSensor sensor;
     private Animator _animator;
 
-    //Bullets
+    //Bullets 
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
 
     //WallJump
-    private bool isWallSliding;
+    /*private bool isWallSliding;
     private float wallSlidingSpeed = 1f;
     [SerializeField] private Transform wallChecker;
     [SerializeField] private LayerMask wallLayer;
+    */
+
+    //Others
+    public BGMManager _bgmManager;
 
     void Awake()
     {
@@ -37,6 +41,7 @@ public class CharacterController : MonoBehaviour
         renderer = GetComponent<SpriteRenderer>();
         sensor = GetComponentInChildren<GroundSensor>();
         _animator = GetComponent<Animator>();
+        _bgmManager = GameObject.Find("BGM Manager").GetComponent<BGMManager>();
 
         moveAction = InputSystem.actions["Move"];
         jumpAction = InputSystem.actions["Jump"];
@@ -84,7 +89,7 @@ public class CharacterController : MonoBehaviour
         {
             Shoot();
         }
-        IsWallSliding();
+        //IsWallSliding();
 
     void Shoot()
     {
@@ -98,12 +103,12 @@ public class CharacterController : MonoBehaviour
         rBody2D.linearVelocity = new Vector2(moveDirection.x * movementSpeed, rBody2D.linearVelocity.y);
     }
 
-    private bool IsWalled()
+    /*private bool IsWalled()
     {
         return Physics2D.OverlapCircle(wallChecker.position, 0.2f, wallLayer); //Creamos un criculo alrededor del wallchecker con un radio de 0.2 que devuleve true cuando si detecta el  layer Wall
     }
-
-    private void IsWallSliding()
+    */
+    /*private void IsWallSliding()
     {
         if(IsWalled() && !sensor.isGrounded && moveDirection.x != 0f)
         {
@@ -114,5 +119,14 @@ public class CharacterController : MonoBehaviour
         {
             isWallSliding = false;
         }
+    }
+    */
+    public void Death()
+    {
+        movementSpeed = 0;
+        _boxCollider.enabled = false;
+        _animator.SetTrigger("Is Dead");
+        _bgmManager.StopBGM();
+        Destroy (gameObject,3.2f);
     }
 }
