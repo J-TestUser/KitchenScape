@@ -125,7 +125,7 @@ public class CharacterController : MonoBehaviour
     {
         movementSpeed = 0;
         _boxCollider.enabled = false;
-        _animator.SetTrigger("Is Dead");
+        _animator.SetTrigger("IsDead");
         _bgmManager.StopBGM();
         Destroy (gameObject,3.2f);
     }
