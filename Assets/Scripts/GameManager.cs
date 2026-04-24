@@ -5,9 +5,9 @@ using System.Collections;
 public class GameManager : MonoBehaviour
 {
     public int coins = 0;
-    public bool chocolate;
-    public bool donut;
-    public bool sweet;
+    public bool chocolate = false;
+    public bool donut = false ;
+    public bool sweet = false;
 
     public Text coinsText;
 
@@ -16,5 +16,20 @@ public class GameManager : MonoBehaviour
     {
         coins++;
         //coinsText.text = "x"+ coins.ToString();
+    }
+
+    public void AddChocolate()
+    {
+        chocolate = true;
+    }
+
+    public void AddDonut()
+    {
+        donut = true;
+    }
+
+    public void AddSweet()
+    {
+        sweet = true;
     }
 }

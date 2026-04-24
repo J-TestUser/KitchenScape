@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: 6d0d5904210180b42a144926ac01e06b
+guid: b8f8c6a9171ebbc4093b54e3e69ec11a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5209720356119618007
-    second: chocolate_0
+      213: 6048862160296339182
+    second: Pizza_0
+  - first:
+      213: -6217493301258497457
+    second: Pizza_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -51,7 +54,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 1024
+  spritePixelsToUnits: 512
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,23 +103,45 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: chocolate_0
+      name: Pizza_0
       rect:
         serializedVersion: 2
-        x: 255
-        y: 127
-        width: 546
-        height: 770
+        x: 105
+        y: 223
+        width: 530
+        height: 578
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 92e5e5a30fa53b7b0800000000000000
-      internalID: -5209720356119618007
+      spriteID: ee6e3c72610e1f350800000000000000
+      internalID: 6048862160296339182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Pizza_1
+      rect:
+        serializedVersion: 2
+        x: 710
+        y: 221
+        width: 530
+        height: 578
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f42dd11c8c607b9a0800000000000000
+      internalID: -6217493301258497457
       vertices: []
       indices: 
       edges: []
@@ -125,7 +150,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 968a640fdd5b3ce4db6f3bb792ea7657
     internalID: 0
     vertices: []
     indices: 
@@ -135,7 +160,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      chocolate_0: -5209720356119618007
+      Pizza_0: 6048862160296339182
+      Pizza_1: -6217493301258497457
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

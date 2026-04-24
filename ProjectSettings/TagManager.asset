@@ -5,6 +5,10 @@ TagManager:
   serializedVersion: 3
   tags:
   - DeathZone
+  - Coin
+  - Chocolate
+  - Sweet
+  - Donut
   layers:
   - Default
   - TransparentFX

@@ -123,10 +123,41 @@ public class CharacterController : MonoBehaviour
     */
     public void Death()
     {
+        
         movementSpeed = 0;
-        _boxCollider.enabled = false;
+        rBody2D.constraints = RigidbodyConstraints2D.FreezePosition;
         _animator.SetTrigger("IsDead");
+        sensor.enabled = false;
         _bgmManager.StopBGM();
-        Destroy (gameObject,3.2f);
+        Destroy (gameObject,1f);
+    }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.gameObject.CompareTag("Coin"))
+        {
+            Coleccionables _coin = collision.gameObject.GetComponent<Coleccionables>();
+            _coin.GetCoin();
+        }
+
+        if(collision.gameObject.CompareTag("Chocolate"))
+        {
+            Coleccionables _chocolate = collision.gameObject.GetComponent<Coleccionables>();
+            _chocolate.GetChocolate();
+        }
+
+        if(collision.gameObject.CompareTag("Donut"))
+        {
+            Coleccionables _donut = collision.gameObject.GetComponent<Coleccionables>();
+            _donut.GetDonut();
+        }
+
+        if(collision.gameObject.CompareTag("Sweet"))
+        {
+            Coleccionables _sweet = collision.gameObject.GetComponent<Coleccionables>();
+            _sweet.GetSweet();
+        }
+        
+
     }
 }
