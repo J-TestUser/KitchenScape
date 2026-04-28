@@ -25,6 +25,9 @@ public class CharacterController : MonoBehaviour
     public GameObject bulletPrefab;
     public Transform bulletSpawn;
 
+    [SerializeField] bool _canShoot = false;
+    [SerializeField] int _bulletAmount = 0;
+
     //WallJump
     /*private bool isWallSliding;
     private float wallSlidingSpeed = 1f;
@@ -33,7 +36,7 @@ public class CharacterController : MonoBehaviour
     */
 
     //Others
-    public BGMManager _bgmManager;
+    private BGMManager _bgmManager;
 
     void Awake()
     {
@@ -62,14 +65,14 @@ public class CharacterController : MonoBehaviour
 
         if (moveDirection.x > 0 )
         {
-            renderer.flipX = false;
+            transform.rotation = Quaternion.Euler(0,0,0);
 
             _animator.SetBool("IsWalking", true);
         }
 
         else if (moveDirection.x < 0 )
         {
-            renderer.flipX = true;
+            transform.rotation = Quaternion.Euler(0,180,0);
 
             _animator.SetBool("IsWalking", true);
         }
@@ -85,15 +88,32 @@ public class CharacterController : MonoBehaviour
         }
         _animator.SetBool("IsJumping", !sensor.isGrounded);
 
-        if (shootAction.WasPressedThisFrame())
+        if (shootAction.WasPressedThisFrame() && _canShoot)
         {
             Shoot();
         }
         //IsWallSliding();
+        
+        if(_canShoot)
+        {
+            ShootPowerUp();
+        }
 
     void Shoot()
     {
         Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+    }
+
+    void ShootPowerUp()
+    {
+        while(_bulletAmount > 0)
+        {
+            _bulletAmount--;
+        }
+
+        _canShoot = false;
+
+            
     }
         
 
@@ -156,6 +176,12 @@ public class CharacterController : MonoBehaviour
         {
             Coleccionables _sweet = collision.gameObject.GetComponent<Coleccionables>();
             _sweet.GetSweet();
+        }
+        
+        if (collision.gameObject.CompareTag("PowerUp"))
+        {
+            _bulletAmount = 3;
+            _canShoot = true;
         }
         
 

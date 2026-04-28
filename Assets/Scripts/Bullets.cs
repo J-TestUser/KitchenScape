@@ -20,11 +20,20 @@ public class Bullets : MonoBehaviour
 
     void OnTriggerEnter2D (Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player")|| collision.gameObject.CompareTag("Coin") ||collision.gameObject.CompareTag("Room"))
         {
             return;
         }
+
+        if(collision.gameObject.layer == 8)
+        {
+        Pizza _enemyScript = collision.gameObject.GetComponent<Pizza>();
+        _enemyScript.Death();
+        }
+        
         Destroy(gameObject); 
+        Debug.Log("Desaparezco");
+
     }
 
 

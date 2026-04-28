@@ -100,5 +100,18 @@ public class Pizza : MonoBehaviour
     Debug.Log("Atacando");
     }
 
+    public void Death()
+    {
+        _audioSource.PlayOneShot(_deathSFX);
+        
+        movementSpeed = 0;
+
+        _boxCollider.enabled = false;
+
+        Destroy (gameObject,3);
+        
+        //_gameManager.AddKill();
+    }
+
 
 }

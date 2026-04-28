@@ -9,6 +9,8 @@ TagManager:
   - Chocolate
   - Sweet
   - Donut
+  - Room
+  - PowerUp
   layers:
   - Default
   - TransparentFX
@@ -18,7 +20,7 @@ TagManager:
   - UI
   - Ground
   - Wall
-  - 
+  - Enemies
   - 
   - 
   - 
