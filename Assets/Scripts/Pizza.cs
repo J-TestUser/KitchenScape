@@ -90,8 +90,6 @@ public class Pizza : MonoBehaviour
         }
 
         _rigidBody.linearVelocity = new Vector2(direction * movementSpeed, _rigidBody.linearVelocity.y);
-
-        _animator.SetBool("Is Walking", true);
     }
     void Attack()
     {

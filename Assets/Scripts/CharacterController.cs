@@ -26,7 +26,8 @@ public class CharacterController : MonoBehaviour
     public Transform bulletSpawn;
 
     [SerializeField] bool _canShoot = false;
-    [SerializeField] int _bulletAmount = 0;
+    [SerializeField] float _bulletAmount = 10;
+    [SerializeField] float _powerUpTimer;
 
     //WallJump
     /*private bool isWallSliding;
@@ -106,14 +107,12 @@ public class CharacterController : MonoBehaviour
 
     void ShootPowerUp()
     {
-        while(_bulletAmount > 0)
+        _powerUpTimer += Time.deltaTime;
+
+        if(_powerUpTimer >= _bulletAmount)
         {
-            _bulletAmount--;
-        }
-
-        _canShoot = false;
-
-            
+            _canShoot = false;
+        }       
     }
         
 
@@ -180,7 +179,7 @@ public class CharacterController : MonoBehaviour
         
         if (collision.gameObject.CompareTag("PowerUp"))
         {
-            _bulletAmount = 3;
+            _powerUpTimer = 0;
             _canShoot = true;
         }
         
