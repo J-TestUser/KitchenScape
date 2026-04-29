@@ -6965,8 +6965,8 @@ MonoBehaviour:
   donut: 0
   sweet: 0
   _coinSound: {fileID: 8300000, guid: f6c802ad6e548694685cc3c75aa979c5, type: 3}
-  _itemSound: {fileID: 8300000, guid: ce29dcaa2cb435e499017a7e92c7160d, type: 3}
-  _powerUpSound: {fileID: 0}
+  _itemSound: {fileID: 8300000, guid: 73e12ce36027b9b41814cd8011666d11, type: 3}
+  _powerUpSound: {fileID: 8300000, guid: ce29dcaa2cb435e499017a7e92c7160d, type: 3}
 --- !u!4 &246200943
 Transform:
   m_ObjectHideFlags: 0
@@ -31800,7 +31800,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1226238768
 Transform:
   m_ObjectHideFlags: 0
@@ -32083,7 +32083,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 1, b: 1, a: 1}
-      maxColor: {r: 0.6320754, g: 0.51001054, b: 0.31305623, a: 1}
+      maxColor: {r: 1, g: 1, b: 1, a: 1}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -64955,13 +64955,14 @@ MonoBehaviour:
   moveDirection: {x: 0, y: 0}
   rBody2D: {fileID: 0}
   jump: {fileID: 8300000, guid: e9a20ed2224f3db4aa3c966c63459b72, type: 3}
-  deathSFX: {fileID: 8300000, guid: 11ba65f043fbd0341ad8d1cd3186d790, type: 3}
-  shootSound: {fileID: 0}
+  deathSFX: {fileID: 8300000, guid: 53b0b20b3197b8149980fea8d18ac9d5, type: 3}
+  shootSound: {fileID: 8300000, guid: 11ba65f043fbd0341ad8d1cd3186d790, type: 3}
   bulletPrefab: {fileID: 1703706253090491506, guid: 4670f4144369dcf4680238e4da612cab, type: 3}
   bulletSpawn: {fileID: 1745327719}
   _canShoot: 0
   _bulletAmount: 3
   _powerUpTimer: 0
+  _walkParticles: {fileID: 1226238770}
 --- !u!61 &2109858947
 BoxCollider2D:
   m_ObjectHideFlags: 0

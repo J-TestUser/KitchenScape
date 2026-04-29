@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class CharacterController : MonoBehaviour
 {
@@ -44,6 +45,8 @@ public class CharacterController : MonoBehaviour
     //Others
     private BGMManager _bgmManager;
 
+    public ParticleSystem _walkParticles;
+
     void Awake()
     {
         rBody2D = GetComponent<Rigidbody2D>();
@@ -76,20 +79,32 @@ public class CharacterController : MonoBehaviour
         if (moveDirection.x > 0 )
         {
             transform.rotation = Quaternion.Euler(0,0,0);
-
             _animator.SetBool("IsWalking", true);
+            _walkParticles.Play();
+            if(!_walkParticles.isPlaying && sensor.isGrounded)
+            {
+                _walkParticles.Play();
+            }
         }
 
         else if (moveDirection.x < 0 )
         {
             transform.rotation = Quaternion.Euler(0,180,0);
-
             _animator.SetBool("IsWalking", true);
+            _walkParticles.Play();
+            if(!_walkParticles.isPlaying && sensor.isGrounded)
+            {
+                _walkParticles.Play();
+            }
         }
 
         else
         {
             _animator.SetBool("IsWalking", false);
+            if(_walkParticles.isPlaying && sensor.isGrounded)
+            {
+                _walkParticles.Stop();
+            }
         }
 
         if (jumpAction.WasPressedThisFrame() && sensor.isGrounded)
@@ -102,6 +117,7 @@ public class CharacterController : MonoBehaviour
         if (shootAction.WasPressedThisFrame() && _canShoot)
         {
             Shoot();
+            StartCoroutine(StopShootAnimation());       
         }
         //IsWallSliding();
         
@@ -126,10 +142,17 @@ public class CharacterController : MonoBehaviour
         _powerUpTimer ++;
         _audioSource.PlayOneShot(shootSound);
 
+
         if(_powerUpTimer >= _bulletAmount)
         {
             _canShoot = false;
         }       
+    }
+    IEnumerator StopShootAnimation()
+    {
+        _animator.SetBool("IsShooting", true);
+        yield return new WaitForSeconds(0.1f);
+        _animator.SetBool("IsShooting", false);
     }
         
 
