@@ -111,5 +111,14 @@ public class Pizza : MonoBehaviour
         //_gameManager.AddKill();
     }
 
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Player"))
+        {
+            CharacterController _deathScript = collision.gameObject.GetComponent<CharacterController>();
+            _deathScript.Death();
+        }
+    }
+
 
 }

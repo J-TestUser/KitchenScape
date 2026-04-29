@@ -20,6 +20,11 @@ public class CharacterController : MonoBehaviour
     private SpriteRenderer renderer;
     private GroundSensor sensor;
     private Animator _animator;
+    private AudioSource _audioSource;
+
+    public AudioClip jump;
+    public AudioClip deathSFX;
+    public AudioClip shootSound;
 
     //Bullets 
     public GameObject bulletPrefab;
@@ -45,7 +50,11 @@ public class CharacterController : MonoBehaviour
         renderer = GetComponent<SpriteRenderer>();
         sensor = GetComponentInChildren<GroundSensor>();
         _animator = GetComponent<Animator>();
+        _audioSource = GetComponent<AudioSource>();
+
         _bgmManager = GameObject.Find("BGM Manager").GetComponent<BGMManager>();
+
+
 
         moveAction = InputSystem.actions["Move"];
         jumpAction = InputSystem.actions["Jump"];
@@ -86,6 +95,7 @@ public class CharacterController : MonoBehaviour
         if (jumpAction.WasPressedThisFrame() && sensor.isGrounded)
         {
             rBody2D.AddForce(Vector2.up* jumpForce, ForceMode2D.Impulse);
+            _audioSource.PlayOneShot(jump);
         }
         _animator.SetBool("IsJumping", !sensor.isGrounded);
 
@@ -114,6 +124,7 @@ public class CharacterController : MonoBehaviour
     void ShootPowerUp()
     {
         _powerUpTimer ++;
+        _audioSource.PlayOneShot(shootSound);
 
         if(_powerUpTimer >= _bulletAmount)
         {
@@ -150,6 +161,7 @@ public class CharacterController : MonoBehaviour
     {
         
         movementSpeed = 0;
+        _audioSource.PlayOneShot(deathSFX);
         rBody2D.constraints = RigidbodyConstraints2D.FreezePosition;
         _animator.SetTrigger("IsDead");
         sensor.enabled = false;
