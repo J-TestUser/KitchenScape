@@ -25480,7 +25480,7 @@ GameObject:
   m_TagString: PowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 2147483647
   m_IsActive: 1
 --- !u!61 &997115609
 BoxCollider2D:
@@ -25571,7 +25571,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 10913, guid: 0000000000000000f000000000000000, type: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -59846,7 +59846,8 @@ MonoBehaviour:
   bulletPrefab: {fileID: 1703706253090491506, guid: 4670f4144369dcf4680238e4da612cab, type: 3}
   bulletSpawn: {fileID: 1745327719}
   _canShoot: 0
-  _bulletAmount: 0
+  _bulletAmount: 3
+  _powerUpTimer: 0
 --- !u!61 &2109858947
 BoxCollider2D:
   m_ObjectHideFlags: 0

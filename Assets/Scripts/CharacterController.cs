@@ -95,19 +95,25 @@ public class CharacterController : MonoBehaviour
         }
         //IsWallSliding();
         
-        if(_canShoot)
-        {
-            ShootPowerUp();
-        }
 
     void Shoot()
     {
         Instantiate(bulletPrefab, bulletSpawn.position, bulletSpawn.rotation);
+        ShootPowerUp();
     }
 
-    void ShootPowerUp()
+    /*void ShootPowerUp()
     {
         _powerUpTimer += Time.deltaTime;
+
+        if(_powerUpTimer >= _bulletAmount)
+        {
+            _canShoot = false;
+        }       
+    }*/
+    void ShootPowerUp()
+    {
+        _powerUpTimer ++;
 
         if(_powerUpTimer >= _bulletAmount)
         {
