@@ -12,6 +12,7 @@ public class GameManager : MonoBehaviour
     public bool _victory = false;
     private AudioSource _audioSource;
     public Button winButton;
+    public Text coinText;
 
     [SerializeField] AudioClip _coinSound;
     [SerializeField] AudioClip _itemSound;
@@ -20,11 +21,12 @@ public class GameManager : MonoBehaviour
     public GameObject victoryCanvas;
     public SceneLoader _sceneLoader;
     [SerializeField] string _gameOverScene;
+    private ItemUI _itemUI;
 
     void Awake()
     {
         _sceneLoader = GameObject.Find("SceneLoader").GetComponent<SceneLoader>();
-        victoryCanvas = GameObject.Find("VictoryCanvas").GetComponent<GameObject>();
+        _itemUI = GameObject.Find("ItemUI").GetComponent<ItemUI>();
         _audioSource = GetComponent<AudioSource>();
     }
 
@@ -55,24 +57,27 @@ public class GameManager : MonoBehaviour
     {
         coins++;
         _audioSource.PlayOneShot(_coinSound);
-        //coinsText.text = "x"+ coins.ToString();
+        coinText.text = "x"+ coins.ToString();
     }
 
     public void AddChocolate()
     {
         chocolate = true;
         _audioSource.PlayOneShot(_itemSound);
+        _itemUI.GetChoco();
     }
 
     public void AddDonut()
     {
         donut = true;
         _audioSource.PlayOneShot(_itemSound);
+        _itemUI.GetDonut();
     }
 
     public void AddSweet()
     {
         sweet = true;
         _audioSource.PlayOneShot(_itemSound);
+        _itemUI.GetCandy();
     }
 }
