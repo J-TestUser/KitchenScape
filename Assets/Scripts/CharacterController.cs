@@ -22,6 +22,7 @@ public class CharacterController : MonoBehaviour
     private GroundSensor sensor;
     private Animator _animator;
     private AudioSource _audioSource;
+    private GameManager _gameManager;
 
     public AudioClip jump;
     public AudioClip deathSFX;
@@ -56,6 +57,7 @@ public class CharacterController : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
 
         _bgmManager = GameObject.Find("BGM Manager").GetComponent<BGMManager>();
+        _gameManager = GameObject.Find ("GameManager").GetComponent<GameManager>();
 
 
 
@@ -189,7 +191,8 @@ public class CharacterController : MonoBehaviour
         _animator.SetTrigger("IsDead");
         sensor.enabled = false;
         _bgmManager.StopBGM();
-        Destroy (gameObject,1f);
+        StartCoroutine(_gameManager.GameOver());
+        Destroy (gameObject,4f);
     }
 
     void OnTriggerEnter2D(Collider2D collision)
